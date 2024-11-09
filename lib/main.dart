@@ -23,6 +23,12 @@ class MyApp extends StatelessWidget {
           return MapaPage();
         },
       },
+      theme: ThemeData(
+        primaryColor: Colors.deepPurple,
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.deepPurple,
+        ),
+      ),
     );
   }
 }
