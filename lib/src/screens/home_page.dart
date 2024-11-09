@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qr_scanner_app/src/screens/direcciones_page.dart';
+import 'package:qr_scanner_app/src/screens/mapas_page.dart';
 import 'package:qr_scanner_app/src/widgets/custom_navigatorbar.dart';
 import 'package:qr_scanner_app/src/widgets/scan_buttom.dart';
 
@@ -9,12 +11,36 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(elevation: 0, title: const Text("Historial"), actions: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.delete_forever))
+        IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.delete_forever,
+            ))
       ]),
-      body: const Center(child: Text("Home Page")),
+      body: const _HomePageBody(),
       bottomNavigationBar: const CustomNavigationBar(),
       floatingActionButton: const ScanButtom(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
+  }
+}
+
+class _HomePageBody extends StatelessWidget {
+  const _HomePageBody();
+
+  @override
+  Widget build(BuildContext context) {
+    const currentIndex = 1;
+
+    switch (currentIndex) {
+      case 0:
+        return const MapasPage();
+
+      case 1:
+        return const DireccionesPage();
+
+      default:
+        return const MapasPage();
+    }
   }
 }
