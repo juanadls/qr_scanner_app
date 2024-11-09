@@ -30,7 +30,7 @@ class _HomePageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const currentIndex = 1;
+    const currentIndex = 0;
 
     switch (currentIndex) {
       case 0:
