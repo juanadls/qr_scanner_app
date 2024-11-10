@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:qr_scanner_app/src/providers/db_provider.dart';
 import 'package:qr_scanner_app/src/providers/ui_provider.dart';
 import 'package:qr_scanner_app/src/screens/direcciones_page.dart';
 import 'package:qr_scanner_app/src/screens/mapas_page.dart';
@@ -34,6 +35,7 @@ class _HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final uiprovider = Provider.of<UiProvider>(context);
     final currentIndex = uiprovider.selectedMenuOpt;
+    DBProvider.db.database;
 
     switch (currentIndex) {
       case 0:

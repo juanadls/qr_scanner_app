@@ -24,6 +24,7 @@ class DBProvider extends ChangeNotifier {
 initDB() async {
   Directory documentsDirectory = await getApplicationCacheDirectory();
   final path = join(documentsDirectory.path, "ScansDB.db");
+  print(path);
 
   return await openDatabase(
     path,
